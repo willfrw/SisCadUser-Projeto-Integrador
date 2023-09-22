@@ -34,7 +34,7 @@ body {
 }
 
 .form-image img {
-    width: 35rem;
+    width: 30rem;
 }
 
 .form {
@@ -53,12 +53,12 @@ body {
     justify-content: space-between;
 }
 
-.login-button {
+.profile-picture {
     display: flex;
     align-items: center;
 }
 
-.login-button button {
+.profile-picture button {
     border: none;
     background-color: #6c63ff;
     padding: 0.4rem 1rem;
@@ -66,11 +66,11 @@ body {
     cursor: pointer;
 }
 
-.login-button button:hover {
+.profile-picture button:hover {
     background-color: #6b63fff1;
 }
 
-.login-button button a {
+.profile-picture button a {
     text-decoration: none;
     font-weight: 500;
     color: #fff;
