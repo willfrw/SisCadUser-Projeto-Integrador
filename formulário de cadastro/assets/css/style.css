@@ -25,15 +25,16 @@ body {
 
 .form-image {
     width: 50%;
+    border: true;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fde3a7d7;
+    background-color: #fff;
     padding: 1rem;
 }
 
 .form-image img {
-    width: 31rem;
+    width: 35rem;
 }
 
 .form {
@@ -42,7 +43,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 3rem;
 }
 
