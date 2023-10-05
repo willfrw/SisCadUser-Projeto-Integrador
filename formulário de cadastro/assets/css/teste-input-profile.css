@@ -1,15 +1,15 @@
-.picture__input {
+#picture__input {
     display: none;
 }
 
 .picture {
     width: 3cm;
     aspect-ratio: 3/4;
-    background: #ccc;
+    background: #000;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #aaa;
+    color: #white;
     border: 2px dashed #aaa;
     cursor: pointer;
     font-family: sans-serif;
@@ -27,6 +27,11 @@
     background: #eee;
 }
 
-.picture__img {
+.picture:focus {
+    outline: 2px solid gray;
+    box-shadow: 0 0 10px black;
+}  
+
+.picture__image {
     max-width: 100%;
 }
