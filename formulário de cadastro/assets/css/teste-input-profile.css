@@ -1,0 +1,32 @@
+.picture__input {
+    display: none;
+}
+
+.picture {
+    width: 3cm;
+    aspect-ratio: 3/4;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    border: 2px dashed #aaa;
+    cursor: pointer;
+    font-family: sans-serif;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out;
+}
+
+.picture:hover {
+    color: #777;
+    background: #ccc;
+}
+
+.picture:active {
+    border-color: aquamarine;
+    color: aquamarine;
+    background: #eee;
+}
+
+.picture__img {
+    max-width: 100%;
+}

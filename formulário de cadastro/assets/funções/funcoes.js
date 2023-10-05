@@ -27,3 +27,20 @@ function mascaraCPF(i){
    if (v.length == 10) i.value += "-";
 
 }
+
+document.getElementById('uploadForm').addEventListener('submit', function(e) {
+   e.preventDefault();
+
+   var fileInput = document.getElementById('photo');
+   var file = fileInput.files[0];
+   if (file) {
+       var reader = new FileReader();
+
+       reader.onload = function(e) {
+           var previewDiv = document.getElementById('preview');
+           previewDiv.innerHTML = '<img src="' + e.target.result + '" alt="Foto 3x4">';
+       }
+
+       reader.readAsDataURL(file);
+   }
+});
