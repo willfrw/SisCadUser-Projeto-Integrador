@@ -1,14 +1,39 @@
-const inputFile = document.querySelector('#picture__input');
+console.log("Script Running!");
+document.addEventListener("DOMContentLoaded", function () {
+    const inputFile = document.querySelector("#picture__input");
+    const pictureImage = document.querySelector("#picture__image");
+    const pictureImageTxt = "Foto 3x4";
+    pictureImage.innerHTML = pictureImageTxt;
 
-const pictureImage = document.querySelector('.picture__image');
+inputFile.addEventListener("change", function (e) {
+    console.log("File input changed!");
+  const inputTarget = e.target;
+  const file = inputTarget.files[0];
 
-const pictureImageTxt = "Foto 3x4";
+  if (file) {
+    const reader = new FileReader();
 
-pictureImage.innerHTML = pictureImageTxt;
+    reader.addEventListener("load", function (e) {
+      const readerTarget = e.target;
 
-inputFile.addEventListener('change', function(e) {
-    const inputTarget = e.target;
-    const file = inputTarget.files[0];
+      const img = document.createElement("img");
+      img.src = readerTarget.result;
+      img.classList.add("picture__img");
 
-    console.log(file);
+      pictureImage.innerHTML = "";
+      pictureImage.appendChild(img);
+    });
+
+    reader.readAsDataURL(file);
+  } else {
+    pictureImage.innerHTML = pictureImageTxt;
+  }
 });
+});
+
+
+function cmToPixels(cm) {
+    const inchToCm = 2.54;
+    const pixelsPerInch = 96; // Ajuste conforme a resolução do dispositivo
+    return cm * inchToCm * pixelsPerInch;
+  }
