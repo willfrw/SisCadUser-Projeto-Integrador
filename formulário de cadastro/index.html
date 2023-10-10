@@ -13,17 +13,7 @@
             <img src="assets\img\LOGOS-FORM.png" alt="">
         </div>
         <div class="form">
-            <td>
-                <tr>
-                    
-                </tr>
-            </td>
-            <form id="uploadForm" enctype="multipart/form-data">
-                <label for="photo">Foto 3x4:</label>
-                <input type="file" id="photo" name="photo" accept="image/*">
-                <br><br>
-                <button type="submit">Enviar Foto</button>
-            </form>
+                   
 
             <div id="preview"></div>
             
@@ -32,8 +22,11 @@
                     <div class="title">
                         <h1>Anamnese</h1>
                     </div>
-                    <div class="profile-picture">
-                        <button><a href="#">Foto</a></button>
+                    <div id="profile-picture">
+                        <label class="picture" for="picture__input" tabIndex="0">
+                            <span id="picture__image"></span>
+                        </label>
+                        <input type="file" name="picture__input" id="picture__input">
                     </div>
                 </div>
 
@@ -84,6 +77,94 @@
                         <label for="cpf">CPF</label>
                         <input id="cpf" oninput="mascaraCPF(this)" type="text" name="cpf" placeholder="Digite o CPF" required>
                     </div>
+
+                    <div class="input-box">
+                        <label for="nis">NIS</label>
+                        <input id="nis" oninput="mascaraNIS(this)"type="text" name="nis" placeholder="Digite o NIS" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="sus">SUS</label>
+                        <input id="sus" oninput="mascaraSUS(this)" type="text" name="sus" placeholder="Digite o SUS" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="address">Endereço</label>
+                        <input id="address" type="text" name="address" placeholder="Digite o endereço" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="address-number">Número</label>
+                        <input id="address-number" type="text" name="address-number" placeholder="Digite o Número" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="neighborhood">Bairro</label>
+                        <input id="neighborhood" type="text" name="neighborhood" placeholder="Digite o Bairro" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="cep">CEP</label>
+                        <input id="cep" type="text" name="cep" placeholder="Digite o CEP" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="county">Município</label>
+                        <input id="county" type="text" name="county" placeholder="Digite o Municipío" required>
+                    </div>
+
+                    <label for="ufSelect">Selecione uma UF:</label>
+                        <select id="ufSelect">
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AP">AP</option>
+                            <option value="AM">AM</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MT">MT</option>
+                            <option value="MS">MS</option>
+                            <option value="MG">MG</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PR">PR</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RS">RS</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="SC">SC</option>
+                            <option value="SP">SP</option>
+                            <option value="SE">SE</option>
+                            <option value="TO">TO</option>
+                        </select>
+
+                        <div class="input-box">
+                            <label for="reference">Ponto de Referência</label>
+                            <input id="reference" type="text" name="reference" placeholder="Ponto de Referência" required>
+                        </div>
+                        <div>
+                            <label for="filiação">Filiação:</label>
+                            <div class="input-box">
+                                <label for="genitora">Genitora</label>
+                                <input id="genitora" type="text" name="genitora" placeholder="Nome da genitora">
+                            </div>
+    
+                            <div class="input-box">
+                                <label for="genitor">Genitor</label>
+                                <input id="genitor" type="text" name="genitor" placeholder="Nome do genitor">
+                            </div>
+                        </div>
+                        
+
+                        <div class="input-box">
+                            <label for="telefone-fixo">Telefone Fixo</label>
+                            <input id="telefone-fixo" type="text" name="telefone-fixo" placeholder="Telefone Fixo">
+                        </div>
                                          
                 </div>
 <!--
