@@ -8,10 +8,17 @@
     <title>Formulário de Cadastro - Centro de Reabilitação</title>
 </head>
 <body>
+    <header>
+        <h1>Estado do Rio de Janeiro</h1>
+        <h1>Prefeitura Municipal de Maricá</h1>
+        <h2>Secretaria Municipal de Assistência Social</h2>
+        <h2>Coordenação de Reabilitação</h2>
+        <h2>Centro de Reabilitação</h2>
+        <h3>centrodereabilitacao.marica@gmail.com</h3>
+        <h3>(21) 9 9501-6295</h3>
+    </header>
     <div class="container">
-        <div class="form-image">
-            <img src="assets\img\LOGOS-FORM.png" alt="">
-        </div>
+        
         <div class="form">
             <td>
                 <tr>
@@ -33,93 +40,141 @@
                         <h1>Anamnese</h1>
                     </div>
                     <div class="profile-picture">
-                        <button><a href="#">Foto</a></button>
+                        <label class="picture" for="picture__input" tabIndex="0">
+                            <span id="picture__image"></span>
+                        </label>
+                        <input type="file" name="picture__input" id="picture__input">
                     </div>
                 </div>
 
                 <div class="input-group">
 
-                    <div class="input-box">
-                        <label for="prontuario">Prontuário</label>
-                        <input id="prontuario" type="number" min="1" name="prontuario" placeholder="Número de Prontuário" required>
+                    <div id="data-sector">
+                        <div class="input-box">
+                            <label for="prontuario">Prontuário</label>
+                            <input id="prontuario" type="number" min="1" name="prontuario" placeholder="Número de Prontuário" required>
+                        </div>
+    
+                        <div class="input-box">
+                            <label for="date">Data de Acolhimento</label>
+                            <input id="date" type="date" name="date" placeholder="" required>
+                        </div>
                     </div>
+                    
+                    <div id="personal-data">
+                        <div class="input-box">
+                            <label for="fullname">Nome Completo</label>
+                            <input id="fullname" type="text" name="fullname" placeholder="Digite o nome completo" required>
+                        </div>
+    
+                        <div class="input-box">
+                            <label for="birth-date" >Data de Nascimento</label>
+                            <input id="birth-date" type="date" name="birth-date" oninput="calculateAge()" placeholder="" required>
+                        </div>
+    
+                        <div class="input-box">
+                            <label for="age">Idade</label>
+                            <input id="age" type="text" name="age" readonly>
+                        </div>
+    
+                        <div class="input-box">
+                            <label for="naturalness">Naturalidade</label>
+                            <input id="naturalness" type="text" name="naturalness" placeholder="Digite a naturalidade" required>
+                        </div>
+                        
+                        <div class="input-box">
+                            <label for="rg">Identidade</label>
+                            <input id="rg" oninput="mascaraRG(this)" type="text" name="rg" placeholder="Digite a identidade (RG)" required>
+                        </div>
+    
+                        <div class="input-box">
+                            <label for="cpf">CPF</label>
+                            <input id="cpf" oninput="mascaraCPF(this)" type="text" name="cpf" placeholder="Digite o CPF" required>
+                        </div>
+    
+                        <div class="input-box">
+                            <label for="nis">NIS</label>
+                            <input id="nis" oninput="mascaraNIS(this)" type="text" name="nis" placeholder="Digite o NIS">
+                        </div>
+    
+                        <div class="input-box">
+                            <label for="sus">SUS</label>
+                            <input id="sus" oninput="mascaraSUS(this)" type="text" name="sus" placeholder="Digite o SUS">
+                        </div>
+    
+                        <div class="input-box">
+                            <label for="gender">Gênero</label>
+                            <select name="gender" id="gender">
+                                <option value="">Selecione um gênero</option>
+                                <option value="female">Feminino</option>
+                                <option value="male">Marculino</option>
+                                <option value="others">Outros</option>
+                                <option value="none">Prefiro não dizer</option>
+                            </select>                     
+                        </div>
+                    </div>
+                    
+                    <div id="personal-address">
+                        <div class="input-box">
+                            <label for="address">Endereço</label>
+                            <input id="address" type="text" name="address" placeholder="Digite a Rua">
+    
+                            <label for="neighborhood">Bairro</label>
+                            <input id="neighborhood" type="text" name="neighborhood" placeholder="Digite o Bairro">
+    
+                            <label for="cep">CEP</label>
+                            <input id="cep" type="text" name="cep" placeholder="Digite o CEP">
+                            <button><a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank">Buscar CEP</a></button>
+                            <br>
+                            <label for="municipality">Município</label>
+                            <input id="municipality" type="text" name="municipality" placeholder="Digite o Município">
+    
+                            <label for="uf">UF</label>
+                            <input id="uf" type="text" name="uf" placeholder="Digite a Unidade Federal" oninput="this.value = this.value.toUpperCase()" maxlength="2">
 
-                    <div class="input-box">
-                        <label for="date">Data de Acolhimento</label>
-                        <input id="date" type="date" name="date" placeholder="" required>
-                    </div>
+                            <label for="district">Distrito</label>
+                            <select name="district" id="district">
+                                <option value="">Selecione o distrito da residência</option>
+                                <option value="first">1° Distrito</option>
+                                <option value="second">2° Distrito</option>
+                                <option value="third">3° Distrito</option>
+                                <option value="fourth">4° Distrito</option>
+                            </select>                            
+                            <button><a href="https://maricainfo.com/mapa-de-marica" target="_blank">Consutar Distrito</a></button> 
 
-                    <div class="input-box">
-                        <label for="fullname">Nome Completo</label>
-                        <input id="fullname" type="text" name="fullname" placeholder="Digite o nome completo" required>
-                    </div>
-
-                    <div class="input-box">
-                        <label for="birth-date">Data de Nascimento</label>
-                        <input id="birth-date" type="date" name="birth-date" placeholder="" required>
-                    </div>
-
-                    <div class="input-box">
-                        <label for="naturalness">Naturalidade</label>
-                        <input id="naturalness" type="text" name="naturalness" placeholder="Digite a naturalidade" required>
-                    </div>
-
-                    <div class="input-box">
-                        <label for="gender">Gênero</label>
-                        <select name="gender" id="gender">
-                            <option value="">Selecione um gênero</option>
-                            <option value="female">Feminino</option>
-                            <option value="male">Marculino</option>
-                            <option value="others">Outros</option>
-                            <option value="none">Prefiro não dizer</option>
-                        </select>                     
-                    </div>
-
-                    <div class="input-box">
-                        <label for="rg">Identidade</label>
-                        <input id="rg" oninput="mascaraRG(this)" type="text" name="rg" placeholder="Digite a identidade (RG)" required>
-                    </div>
-
-                    <div class="input-box">
-                        <label for="cpf">CPF</label>
-                        <input id="cpf" oninput="mascaraCPF(this)" type="text" name="cpf" placeholder="Digite o CPF" required>
-                    </div>
-                                         
+                            <br>
+                            <label for="reference">Ponto de Referência</label>
+                            <input id="reference" type="text" name="reference" placeholder="Digite um Ponto de Referência">
+    
+                            
+                        </div>
+                    </div>    
+                    
+                    <div id="legal-guardians-data">
+                        <div class="input-box">
+                            <label for="tel">Telefone fixo</label>
+                            <input id="tel" oninput="mascaraTEL(this)" type="text" name="tel" placeholder="Digite o telefone fixo">
+    
+                            <label for="cel1">Celular 1</label>
+                            <input id="cel1" oninput="mascaraCEL(this)" type="text" name="cel1" placeholder="Digite o telefone celular">
+                            <input id="name-cel1" type="text" name="name-cel1" placeholder="Nome">
+    
+                            <label for="cel2">Celular 2</label>
+                            <input id="cel2" oninput="mascaraCEL(this)" type="text" name="cel2" placeholder="Digite o telefone celular">
+                            <input id="name-cel2"  type="text" name="name-cel2" placeholder="Nome">
+                        </div>
+                    </div>                 
                 </div>
-<!--
-                <div class="gender-inputs">
-                    <div class="gender-title">
-                        <h6>Gênero</h6>
-                    </div>
 
-                    <div class="gender-group">
-                        <div class="gender-input">
-                            <input type="radio" id="female" name="gender">
-                            <label for="female">Feminino</label>
-                        </div>
-
-                        <div class="gender-input">
-                            <input type="radio" id="male" name="gender">
-                            <label for="male">Masculino</label>
-                        </div>
-
-                        <div class="gender-input">
-                            <input type="radio" id="others" name="gender">
-                            <label for="others">Outros</label>
-                        </div>
-
-                        <div class="gender-input">
-                            <input type="radio" id="none" name="gender">
-                            <label for="none">Prefiro não dizer</label>
-                        </div>
-                    </div>
-                </div>
--->
-                <div class="continue-button">
-                    <button><a href="#">Continuar</a></button>
+                <div class="send-button">
+                    <button><a href="#">Enviar</a></button>
                 </div>
             </form>
         </div>
     </div>
+    <footer>
+        <h3>centrodereabilitacao.marica@gmail.com</h3>
+        <h3>(21) 9 9501-6295</h3>
+    </footer>
 </body>
 </html>

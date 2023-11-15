@@ -36,4 +36,4 @@ function cmToPixels(cm) {
     const inchToCm = 2.54;
     const pixelsPerInch = 96; // Ajuste conforme a resolução do dispositivo
     return cm * inchToCm * pixelsPerInch;
-  }
+}
