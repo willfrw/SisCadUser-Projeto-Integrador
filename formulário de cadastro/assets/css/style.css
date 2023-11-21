@@ -23,7 +23,7 @@
     color: #aaa;
     border: 2px dashed currentcolor;
     cursor: pointer;
-    font-family: sans-serif;
+    font-family: Inter;
     transition: color 300ms ease-in-out, background 300ms ease-in-out;
     outline: none;
     overflow: hidden;
@@ -52,60 +52,71 @@
 }
 
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f2f2f2; /* Cinza claro */
-    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 10px;
+    padding: 10px 0;
+}
+
+header img {
+    max-width: 100px; /* Ajuste o tamanho máximo conforme necessário */
+    vertical-align: middle;
+}
+
+/* Estilos para posicionar as imagens */
+#logo-pref {
+    float: left;
+}
+
+#logo-cr {
+    float: right;
 }
 
 .container {
-    max-width: 800px; /* Tamanho máximo do conteúdo */
-    background-color: white;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
-    border-radius: 10px;
+    background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.form {
-    margin: 0 auto; /* Centralizar o formulário */
-    width: 100%;
-}
 
-/* Estilos para o formulário (exemplo) */
-form {
-    /* Estilos do formulário aqui */
-}
-
-.input-box {
+.input-group {
     margin-bottom: 20px;
 }
 
-/* Resto dos estilos para os campos de entrada, seleção, etc. (mantive os estilos existentes) */
+.input-box {
+    margin-bottom: 15px;
+}
+
 input[type="text"],
 input[type="number"],
 input[type="date"],
-textarea,
 select {
-    width: calc(100% - 12px);
+    width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 input[type="submit"] {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #0056b3;
 }
