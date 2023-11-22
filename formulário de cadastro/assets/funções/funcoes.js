@@ -185,3 +185,7 @@ function calculateAge() {
 
 // Adiciona um ouvinte de evento para detectar mudanças no campo de data de nascimento
 document.getElementById('birthDate').addEventListener('input', calculateAge);
+
+function printPage() {
+   window.print();
+ }

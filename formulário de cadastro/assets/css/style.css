@@ -52,7 +52,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Inter, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -61,8 +61,13 @@ body {
 header {
     text-align: center;
     font-size: 12px;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
     padding: 10px 0;
+}
+
+.contact {
+    max-width: 20px;
+
 }
 
 header img {
@@ -79,6 +84,19 @@ header img {
     float: right;
 }
 
+.form-header {
+    text-align: center;
+    font-size: 12px;
+    align-self: center;
+}
+
+.profile-picture {
+    display: flex;
+    flex-direction: row-reverse; /* Inverte a direção dos elementos */
+    align-items: center;
+    margin-bottom: 2px;
+}
+
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -88,12 +106,25 @@ header img {
 }
 
 
-.input-group {
-    margin-bottom: 20px;
+.input-box {
+    margin-bottom: 6px
 }
 
-.input-box {
-    margin-bottom: 15px;
+#data-sector {
+    display: flex;
+    align-items: flex-start; /* Alinha os itens ao topo */
+}
+  
+  
+fieldset {
+    display: grid;
+    grid-template-columns: repeat(2, 0.8fr);
+    gap: 10px;
+    border: none;
+  }
+
+.input-box label {
+    margin-bottom: 2px; /* Adicione um espaço entre o label e o input */
 }
 
 input[type="text"],
@@ -101,13 +132,14 @@ input[type="number"],
 input[type="date"],
 select {
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
 }
 
-input[type="submit"] {
+input[type="submit"],
+#personal-address button {
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
@@ -117,6 +149,17 @@ input[type="submit"] {
     transition: background-color 0.3s;
 }
 
-input[type="submit"]:hover {
+#personal-address button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+input[type="submit"]:hover,
+#personal-address button:hover {
     background-color: #0056b3;
+}
+
+.print-button img{
+    width: 30px;
+    cursor: pointer;
 }
