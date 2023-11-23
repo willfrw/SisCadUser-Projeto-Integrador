@@ -207,3 +207,15 @@ function printPage() {
    // Use html2pdf para gerar o PDF
    html2pdf().from(element).set(options).save();
  }
+
+ function savePDFAndSubmit(event) {
+   event.preventDefault(); // Impede o envio do formulário padrão imediatamente
+
+   // Baixe o PDF primeiro
+   downloadPDF();
+
+   // Aguarde um segundo (1000 milissegundos) antes de enviar o formulário
+   setTimeout(() => {
+     event.target.submit(); // Envie o formulário após o atraso
+   }, 1000);
+ }
