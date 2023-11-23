@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" href="assets/img/logo-cr.png">
     <script src="assets\funções\funcoes.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
 </head>
 <body>
     <div class="page">
@@ -300,17 +301,17 @@
                             </div>
                         </fieldset>
                     </div>
-                    <fieldset>
+                    <fieldset id="final-buttons">
                         <div class="send-button">
                             <input type="submit" value="Enviar">
                         </div>
                         <div class="print-button">
                             <button onclick="printPage()"><img src="assets/img/print-img.png" alt="print-button"></button>
                         </div>
-                    </fieldset>
-                    
-
-                    
+                        <div class="download-button">
+                            <button onclick="downloadPDF()"><img src="assets/img/downloadicon.png" alt="download-button"></button>
+                        </div>
+                    </fieldset>                  
                 </form>
             </div>
         </div>

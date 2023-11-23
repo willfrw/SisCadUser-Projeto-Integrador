@@ -189,3 +189,21 @@ document.getElementById('birthDate').addEventListener('input', calculateAge);
 function printPage() {
    window.print();
  }
+
+ function downloadPDF() {
+   const prontuarioValue = document.getElementById('prontuario').value || 'SemProntuario';
+   const fullnameValue = document.getElementById('fullname').value || 'SemNome';
+   const element = document.documentElement;
+   const filename = `${prontuarioValue}_${fullnameValue}.pdf`;
+
+   const options = {
+     margin: 10,
+     filename: filename,
+     image: { type: 'jpeg', quality: 0.98 },
+     html2canvas: { scale: 2 },
+     jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+   };
+
+   // Use html2pdf para gerar o PDF
+   html2pdf().from(element).set(options).save();
+ }

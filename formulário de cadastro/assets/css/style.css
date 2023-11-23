@@ -154,12 +154,18 @@ input[type="submit"],
     text-decoration: none;
 }
 
+#final-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 0.01fr);
+    gap:2;
+    border: none;
+}
 input[type="submit"]:hover,
 #personal-address button:hover {
     background-color: #0056b3;
 }
 
-.print-button img{
-    width: 30px;
+.print-button img, .download-button img{
+    width: 28px;
     cursor: pointer;
 }
