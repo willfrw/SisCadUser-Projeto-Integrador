@@ -176,7 +176,7 @@ function calculateAge() {
      let age = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
 
      // Atualiza a idade com a idade calculada
-     document.getElementById('age').value = age + ' anos';
+     document.getElementById('age').value = age + ' ANOS';
  } else {
      // Se nenhuma data for selecionada retorna o valor vazio
      document.getElementById('age').value = '';

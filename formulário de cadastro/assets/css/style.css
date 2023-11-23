@@ -35,8 +35,8 @@
 }
 
 .picture:active {
-    border-color: turquoise;
-    color: turquoise;
+    border-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     background: #eee;
 }
 
@@ -141,13 +141,18 @@ select {
 input[type="submit"],
 #personal-address button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #0cd627;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
+#personal-address button {
+    background-color: #007bff;  
+}
+
 
 #personal-address button a {
     color: #fff;
@@ -161,6 +166,10 @@ input[type="submit"],
     border: none;
 }
 input[type="submit"]:hover,
+#personal-address button:hover {
+    background-color: #1b811b;
+}
+
 #personal-address button:hover {
     background-color: #0056b3;
 }

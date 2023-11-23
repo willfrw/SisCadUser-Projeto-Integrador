@@ -50,9 +50,9 @@
                             <fieldset>
                                 <div class="input-box">
                                     <label for="prontuario">Prontuário</label>
-                                    <input id="prontuario" type="number" min="1" name="Prontuário" placeholder="Número de Prontuário" required>
+                                    <input id="prontuario" type="number" min="1" name="PRONT" placeholder="Número de Prontuário" required>
                                     <label for="date">Data de Acolhimento</label>
-                                    <input id="date" type="date" name="Data de Acolhimento" placeholder="" required>
+                                    <input id="date" type="date" name="ACOLHIMENTO" placeholder="" required>
                                 </div>
                             </fieldset>
                             <div class="profile-picture">
@@ -69,27 +69,27 @@
                             <fieldset>
                                 <div class="input-box">
                                     <label for="fullname">Nome Completo</label>
-                                    <input id="fullname" type="text" name="Nome Completo" placeholder="Digite o nome completo" required>
+                                    <input id="fullname" oninput="this.value = this.value.toUpperCase()" type="text" name="NOME" placeholder="Digite o nome completo" required>
                                 </div>
                                 <br>
                                 <div class="input-box">
                                     <label for="birth-date" >Data de Nascimento</label>
-                                    <input id="birth-date" type="date" name="Data de Nascimento" oninput="calculateAge()" placeholder="" required>
+                                    <input id="birth-date" type="date" name="DN" oninput="calculateAge()" placeholder="" required>
                                 </div>
                                 <div class="input-box">
                                     
                                     <label for="age">Idade</label>
-                                    <input id="age" type="text" name="Idade" readonly>
+                                    <input id="age" type="text" name="IDADE" readonly>
                                 </div>
             
             
                                 <div class="input-box">
                                     <label for="nationality">Nacionalidade</label>
-                                    <input id="nationality" type="text" name="Nacionalidade" placeholder="Digite a nacionalidade" required>   
+                                    <input id="nationality" oninput="this.value = this.value.toUpperCase()" type="text" name="NACIONALIDADE" placeholder="Digite a nacionalidade" required>   
                                 </div>
                                 <div class="input-box">
                                     <label for="naturalness">Naturalidade</label>
-                                    <input id="naturalness" type="text" name="Naturalidade" placeholder="Digite a naturalidade" required>
+                                    <input id="naturalness" oninput="this.value = this.value.toUpperCase()" type="text" name="NATURALIDADE" placeholder="Digite a naturalidade" required>
                                 </div>
                                 
                                 
@@ -116,12 +116,12 @@
             
                                 <div class="input-box">
                                     <label for="gender">Gênero</label>
-                                    <select name="Gênero" id="gender">
+                                    <select name="GÊNERO" id="gender">
                                         <option value="">Selecione um gênero</option>
-                                        <option value="Feminino">Feminino</option>
-                                        <option value="Masculino">Masculino</option>
-                                        <option value="Outros">Outros</option>
-                                        <option value="none">Prefiro não dizer</option>
+                                        <option value="F">Feminino</option>
+                                        <option value="M">Masculino</option>
+                                        <option value="O">Outros</option>
+                                        <option value="N">Prefiro não dizer</option>
                                     </select>                    
                                 </div>
     
@@ -129,39 +129,39 @@
                                     <label for="
                                     ethnicity">Etnia</label>
                                     <select name="
-                                    Etnia" id="
+                                    ETNIA" id="
                                     ethnicity" required>
                                         <option value="">Selecione uma opção</option>
-                                        <option value="Preta">Preta</option>
-                                        <option value="Branca">Branca</option>
-                                        <option value="Parda">Parda</option>
-                                        <option value="Amarela">Amarela</option>
-                                        <option value="Indígena">Indígena</option>
-                                        <option value="Prefere não Dizer">Prefiro não dizer</option>
+                                        <option value="PRETA">Preta</option>
+                                        <option value="BRANCA">Branca</option>
+                                        <option value="PARDA">Parda</option>
+                                        <option value="AMARELA">Amarela</option>
+                                        <option value="INDÍGENA">Indígena</option>
+                                        <option value="PREFERE NÃO DIZER">Prefiro não dizer</option>
                                     </select>   
                                 </div>    
 
                                 <div class="input-box">
                                     <label for="school">Unidade de Ensino</label>
-                                    <input id="school" type="text" name="Unidade Escolar" placeholder="Digite a unidade de ensino">  
+                                    <input id="school" oninput="this.value = this.value.toUpperCase()" type="text" name="UNIDADE ESCOLAR" placeholder="Digite a unidade de ensino">  
                                     <label for="school-year">Ano Escolar</label>
-                                    <input id="school-year" type="text" name="Ano Letivo" placeholder="Digite o ano letivo">            
+                                    <input id="school-year" oninput="this.value = this.value.toUpperCase()" type="text" name="ANO LETIVO" placeholder="Digite o ano letivo">            
                                 </div>
     
                                 <div class="input-box">
                                     <label for="education-degree">Grau de Ensino</label>
-                                    <select name="Grau de Ensino" id="education-degree">
-                                        <option value="Fundamental-1">Fundamental 1</option>
-                                        <option value="Fundamental-2">Fundamental 2</option>
-                                        <option value="Médio">Médio</option>
-                                        <option value="Superior">Superior</option>                      
+                                    <select name="GRAU DE ENSINO" id="education-degree">
+                                        <option value="FUND-1">Fundamental 1</option>
+                                        <option value="FUND-2">Fundamental 2</option>
+                                        <option value="MÉDIO">Médio</option>
+                                        <option value="SUPERIOR">Superior</option>                      
                                     </select>
                                     
                                     <label for="shift">Turno</label>
-                                    <select name="Turno" id="shift">
-                                        <option value="Matutino">Matutino</option>
-                                        <option value="Vespertino">Vespertino</option>
-                                        <option value="Noturno">Noturno</option>                 
+                                    <select name="TURNO" id="shift">
+                                        <option value="MATUTINO">Matutino</option>
+                                        <option value="VESPERTINO">Vespertino</option>
+                                        <option value="NOTURNO">Noturno</option>                 
                                     </select> 
                                 </div>
                             </fieldset>
@@ -170,11 +170,11 @@
                                 <fieldset>
                                 <div class="input-box">
                                     <label for="address">Endereço</label>
-                                    <input id="address" type="text" name="Endereço" placeholder="Digite a Rua" required>
+                                    <input id="address" oninput="this.value = this.value.toUpperCase()" type="text" name="ENDEREÇO" placeholder="Digite a Rua" required>
                                 </div>
                                 <div class="input-box">
                                     <label for="neighborhood">Bairro</label>
-                                    <input id="neighborhood" type="text" name="Bairro" placeholder="Digite o Bairro" required>
+                                    <input id="neighborhood" oninput="this.value = this.value.toUpperCase()" type="text" name="BAIRRO" placeholder="Digite o Bairro" required>
                                 </div>
                                 <div class="input-box">
                                     <label for="cep">CEP</label>
@@ -183,18 +183,18 @@
                                 </div>
                                 <div class="input-box">
                                     <label for="district">Distrito</label>
-                                    <select name="Distrito" id="district" required>
+                                    <select name="DISTRITO" id="district" required>
                                         <option value="">Selecione o distrito da residência</option>
-                                        <option value="1°-Distrito">1° Distrito</option>
-                                        <option value="2°-Distrito">2° Distrito</option>
-                                        <option value="3°-Distrito">3° Distrito</option>
-                                        <option value="4°-Distrito">4° Distrito</option>
+                                        <option value="1°-DISTRITO">1° Distrito</option>
+                                        <option value="2°-DISTRITO">2° Distrito</option>
+                                        <option value="3°-DISTRITO">3° Distrito</option>
+                                        <option value="4°-DISTRITO">4° Distrito</option>
                                     </select>                            
                                     <button><a href="https://maricainfo.com/mapa-de-marica" target="_blank">Consutar Distrito</a></button> 
                                 </div>
                                 <div class="input-box">
                                     <label for="municipality">Município</label>
-                                    <input id="municipality" type="text" name="Município" placeholder="Digite o Município" required>
+                                    <input id="municipality" oninput="this.value = this.value.toUpperCase()" type="text" name="MUNICÍPIO" placeholder="Digite o Município" required>
                                 </div>
                                 <div class="input-box">
                                     <label for="uf">UF</label>
@@ -203,15 +203,9 @@
                                 
                                 <div class="input-box">
                                     <label for="reference">Ponto de Referência</label>
-                                    <input id="reference" type="text" name="Ponto de Referência" placeholder="Digite um Ponto de Referência">
+                                    <input id="reference"oninput="this.value = this.value.toUpperCase()"  type="text" name="REFERÊNCIA" placeholder="Digite um Ponto de Referência">
                                 </div>
-                            </fieldset>
-                                    
-            
-                                    
-                                
-
-
+                            </fieldset>                              
                         </div>   
                         
                         <div id="bio-parents">
@@ -219,11 +213,11 @@
                             <fieldset>                          
                                 <div class="input-box">
                                     <label for="father">Genitor</label>
-                                    <input id="father" type="text" name="Genitor" placeholder="Digite o nome do Genitor">
+                                    <input id="father" oninput="this.value = this.value.toUpperCase()" type="text" name="GENITOR" placeholder="Digite o nome do Genitor">
                                 </div>
                                 <div class="input-box">
                                     <label for="Genitora">Genitora</label>
-                                    <input id="mother" type="text" name="Genitora" placeholder="Digite o nome da Genitora">
+                                    <input id="mother" oninput="this.value = this.value.toUpperCase()" type="text" name="GENITORA" placeholder="Digite o nome da Genitora">
                                 </div>
                             </fieldset>
                         </div>
@@ -233,71 +227,64 @@
                             <fieldset>
                                 <div class="input-box">
                                     <label for="legal-guardian">Principal Responsável</label>
-                                    <input id="legal-guardian" type="text" name="Principal Responsável" placeholder="Nome do principal responsável" required>
+                                    <input id="legal-guardian" type="text" name="RESPONSÁVEL" placeholder="Nome do principal responsável" required>
                                     <label for="tel">Telefone fixo</label>
-                                    <input id="tel" oninput="mascaraTEL(this)" minlength="14" type="text" name="Telefone Fixo" placeholder="Digite o telefone fixo">
+                                    <input id="tel" oninput="mascaraTEL(this)" minlength="14" type="text" name="TELEFONE FIXO" placeholder="Digite o telefone fixo">
             
                                     <label for="cel1">Celular 1</label>
-                                    <input id="cel1" oninput="mascaraCEL(this)" minlength="15" type="text" name="Celular 1" placeholder="Digite o celular do responsável" required>
+                                    <input id="cel1" oninput="mascaraCEL(this)" minlength="15" type="text" name="CELULAR 1" placeholder="Digite o celular do responsável" required>
+
+                                    <label for="cel2">Celular 2</label>
+                                    <input id="cel2" oninput="mascaraCEL(this)" minlength="15" type="text" name="CELULAR 2" placeholder="Digite o 2º celular">
+                                    <input id="name-cel2"  type="text" name="NOME 2º CELULAR" placeholder="Nome para o 2º celular">
                                 </div>
 
                                 <div class="input-box">
                                     <label for="legal-guardian-id">RG</label>
-                                    <input id="legal-guardian-id" oninput="mascaraRG(this)" minlength="12" type="text" name="RG Responsável" placeholder="Digite o RG do responsável" required>
+                                    <input id="legal-guardian-id" oninput="mascaraRG(this)" minlength="12" type="text" name="RG RESP" placeholder="Digite o RG do responsável" required>
 
                                     <label for="legal-guardian-cpf">CPF</label>
-                                    <input id="legal-guardian-cpf" oninput="mascaraCPF(this)" minlength="14" type="text" name="CPF Responsável" placeholder="Digite o CPF do responsável" required>
-                                </div>
-
-                                <div class="input-box">
+                                    <input id="legal-guardian-cpf" oninput="mascaraCPF(this)" minlength="14" type="text" name="CPF RESP" placeholder="Digite o CPF do responsável" required>
                                     <label for="kinship">Grau de parentesco</label>
-                                    <input id="kinship" type="text" name="Grau de Parentesco" placeholder="Grau de parentesco do responsável">                   
+                                    <input id="kinship" type="text" name="GRAU DE PARENTESCO" placeholder="Grau de parentesco do responsável">  
                                 </div>
-
-                                <div class="input-box">
-                                    <label for="cel2">Celular 2</label>
-                                    <input id="cel2" oninput="mascaraCEL(this)" minlength="15" type="text" name="Celular 2" placeholder="Digite o 2º celular">
-                                    <input id="name-cel2"  type="text" name="Nome 2º Celular" placeholder="Nome para o 2º celular">
-                                </div>
-
-
                                     <h3>Ocupação Profissional</h3>
                                     <br>
                                         <div class="input-box">
                                             <label for="profession-legal-guardian">Profissão do(a) Responsável</label>
-                                            <input id="profession-legal-guardian" type="text" name="Local de Trabalho" placeholder="Digite a profissão do principal responsável">
+                                            <input id="profession-legal-guardian" oninput="this.value = this.value.toUpperCase()" type="text" name="PROF" placeholder="Digite a profissão do principal responsável">
                                         </div>
                                         <div class="input-box">
                                             <label for="profession-legal-guardian-location">Local de trabalho</label>
-                                            <input id="profession-legal-guardian-location" type="text" name="Local de Trabalho 1" placeholder="Digite o local de trabalho do principal responsável">
+                                            <input id="profession-legal-guardian-location" oninput="this.value = this.value.toUpperCase()" type="text" name="LOCAL DE TRABALHO 1" placeholder="Digite o local de trabalho do principal responsável">
                                         </div>
                                         <div class="input-box">
                                             <label for="profession-snd-legal-guardian">Profissão do segundo responsável</label>
-                                            <input id="profession-snd-legal-guardian" type="text" name="Profissão Segundo Responsável" placeholder="Digite a profissão do segundo responsável">
+                                            <input id="profession-snd-legal-guardian" oninput="this.value = this.value.toUpperCase()" type="text" name="PROF 2° RESP" placeholder="Digite a profissão do segundo responsável">
                                         </div>
                                         <div class="input-box">
                                             <label for="snd-guardian-parenting">Grau de Parentesco 2° Responsável</label>
-                                            <input id="snd-guardian-parenting" type="text" name="Grau de Parentesco do 2° responsável" placeholder="Grau de parentesco do 2° responsável">    
+                                            <input id="snd-guardian-parenting" oninput="this.value = this.value.toUpperCase()" type="text" name="GRAU DE PARENTESCO 2° RESP" placeholder="Grau de parentesco do 2° responsável">    
                                         </div>
                                         <div class="input-box">
                                             <label for="profession-snd-guardian-location">Local de trabalho</label>
-                                            <input id="profession-snd-guardian-location" type="text" name="Local de Trabalho 2" placeholder="Digite o local de trabalho do segundo responsável">
+                                            <input id="profession-snd-guardian-location" oninput="this.value = this.value.toUpperCase()" type="text" name="LOCAL DE TRABALHO 2" placeholder="Digite o local de trabalho do segundo responsável">
                                         </div>
                             </fieldset>
                         </div> 
                         <fieldset>
                             <div class="input-box">
                                 <label for="forward">Encaminhado por:</label>
-                                <input id="forward" type="text" name="Encaminhado" placeholder="Entidade de encaminhamento do paciente">
+                                <input id="forward" oninput="this.value = this.value.toUpperCase()" type="text" name="ENCAMINHADO" placeholder="Entidade de encaminhamento do paciente">
                             </div>
 
                             <div class="input-box">
                                 <label for="diagnosys">Diagnóstico / Queixa Principal</label>
-                                <input id="diagnosys" type="text" name="Diagnóstico" placeholder="Digite o diagnóstico">
+                                <input id="diagnosys" oninput="this.value = this.value.toUpperCase()" type="text" name="DIAGNÓSTICO" placeholder="Digite o diagnóstico">
                             </div>
                             <div class="input-box">
                                 <label for="CID">CID</label>
-                                <input id="CID" type="text" name="CID" placeholder="Digite o CID">
+                                <input id="CID" oninput="this.value = this.value.toUpperCase()" type="text" name="CID" placeholder="Digite o CID">
                             </div>
                         </fieldset>
                     </div>
