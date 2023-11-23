@@ -157,7 +157,7 @@ function calculateAge() {
 
  // Checa se o input não está vazio
  if (inputDate !== '') {
-     // Separate the value into year, month, and day
+     // Separa o valor entre ano, mês e dia
      let separatedDate = inputDate.split('-');
      let year = parseInt(separatedDate[0]);
      let month = parseInt(separatedDate[1]);
