@@ -227,7 +227,7 @@
                             <fieldset>
                                 <div class="input-box">
                                     <label for="legal-guardian">Principal Responsável</label>
-                                    <input id="legal-guardian" type="text" name="RESPONSÁVEL" placeholder="Nome do principal responsável" required>
+                                    <input id="legal-guardian" oninput="this.value = this.value.toUpperCase()"  type="text" name="RESPONSÁVEL" placeholder="Nome do principal responsável" required>
                                     <label for="tel">Telefone fixo</label>
                                     <input id="tel" oninput="mascaraTEL(this)" minlength="14" type="text" name="TELEFONE FIXO" placeholder="Digite o telefone fixo">
             
@@ -236,7 +236,7 @@
 
                                     <label for="cel2">Celular 2</label>
                                     <input id="cel2" oninput="mascaraCEL(this)" minlength="15" type="text" name="CELULAR 2" placeholder="Digite o 2º celular">
-                                    <input id="name-cel2"  type="text" name="NOME 2º CELULAR" placeholder="Nome para o 2º celular">
+                                    <input id="name-cel2" oninput="this.value = this.value.toUpperCase()"   type="text" name="NOME 2º CELULAR" placeholder="Nome para o 2º celular">
                                 </div>
 
                                 <div class="input-box">
@@ -246,7 +246,7 @@
                                     <label for="legal-guardian-cpf">CPF</label>
                                     <input id="legal-guardian-cpf" oninput="mascaraCPF(this)" minlength="14" type="text" name="CPF RESP" placeholder="Digite o CPF do responsável" required>
                                     <label for="kinship">Grau de parentesco</label>
-                                    <input id="kinship" type="text" name="GRAU DE PARENTESCO" placeholder="Grau de parentesco do responsável">  
+                                    <input id="kinship" oninput="this.value = this.value.toUpperCase()"  type="text" name="GRAU DE PARENTESCO" placeholder="Grau de parentesco do responsável">  
                                 </div>
                                     <h3>Ocupação Profissional</h3>
                                     <br>
