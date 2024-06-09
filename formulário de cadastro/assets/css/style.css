@@ -65,14 +65,21 @@ header {
     padding: 10px 0;
 }
 
+header div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 .contact {
     max-width: 20px;
-
 }
 
 header img {
     max-width: 100px; /* Ajuste o tamanho máximo conforme necessário */
-    vertical-align: middle;
+    text-align: center;
 }
 
 /* Estilos para posicionar as imagens */
@@ -80,7 +87,7 @@ header img {
     float: left;
 }
 
-#logo-cr {
+#logo-caif {
     float: right;
 }
 
